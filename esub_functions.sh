@@ -18,7 +18,7 @@ fi
 
 # Test Mise à jour
 function majIntegrdom {
-	wget --no-check-certificate -O /tmp/_VERSION https://raw.githubusercontent.com/dseverin2/clients-linux-scribe/master/_VERSION
+	wget --no-check-certificate -O /tmp/_VERSION https://raw.githubusercontent.com/dseverin2/clients-linux-scribe2/master/_VERSION
 	source /tmp/_VERSION
 	onlineVersion=$versionscript
 	if [ -e ./_VERSION ]; then
@@ -30,7 +30,7 @@ function majIntegrdom {
 	fi
 	if [ "$offlineVersion" != "$onlineVersion" ]; then
 		echo "Mise à jour du script..."
-		wget --no-check-certificate https://github.com/dseverin2/clients-linux-scribe/archive/master.zip
+		wget --no-check-certificate https://github.com/dseverin2/clients-linux-scribe2/archive/master.zip
 		unzip master.zip
 		sudo cp -fr clients-linux-scribe-master/* .
 		sudo rm -fr clients-linux-scribe-master/ master.zip
