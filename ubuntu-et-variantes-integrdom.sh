@@ -79,8 +79,8 @@
 #############################################
 # Run using sudo, of course.
 #############################################
-if [ "$UID" -ne "0" ]; then
-	echo "Il faut etre root pour executer ce script. ==> sudo "
+if [ "$UID" -e "0" ]; then
+	echo "Ne lancez pas ce script en sudo."
 	exit 
 fi 
 
